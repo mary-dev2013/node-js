@@ -1,11 +1,11 @@
-// const add = require('./utils.js')
 
-// const sum = add(4, -2)
-
-// console.log(sum)
-
+const chalk = require('chalk')
+const validator = require('validator')
 const getNotes = require('./notes.js')
 
 const msg = getNotes()
-
 console.log(msg)
+
+const greenMsg = chalk.inverse.green.bold('Sucess!')
+console.log(greenMsg)
+console.log(validator.isURL('https://mead.io'))
