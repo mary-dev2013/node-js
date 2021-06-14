@@ -15,10 +15,17 @@ yargs.command({
             describe: 'Note title ',
             demandOption: true,
             type: 'string'
+        },
+        body:{
+            describe: 'Note body ',
+            demandOption: true,
+            type: 'string'
+
         }
     },
-    handler: function (){
-        console.log('Adding a new note',argv)
+    handler: function (argv){
+        console.log('Title' + argv.title)
+        console.log('Body' + argv.body)
     }
 })
 // Create remove command 
