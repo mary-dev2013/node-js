@@ -1,14 +1,9 @@
-const { require } = require("yargs")
 const fs = require('fs')
 
 const book = {
-    title: 'Ego is the Enemy',
-    author: 'Ryan Holiday'
+    title: 'Web Development',
+    author: 'Mary Grace Delos Reyes'
 }
 
 const bookJSON = JSON.stringify(book)
-console.log(bookJSON)
-
-const parseData =  JSON.parse(bookJSON)
-console.log(parseData.author)
-
+fs.writeFileSync('1-json.json', bookJSON)
