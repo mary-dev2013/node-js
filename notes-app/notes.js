@@ -9,7 +9,7 @@ const addNote = function (title, body){
     const duplicateNotes = notes.filter(function (note){
         return note.title === title 
     })
-    
+
     if (duplicateNotes.length === 0 ){
         notes.push({
             title: title,
@@ -21,6 +21,10 @@ const addNote = function (title, body){
         console.log('Note title taken!')
     }
     
+}
+
+const removeNote = function(title) {
+    console.log(title)
 }
 
 const saveNotes = function (notes){
@@ -41,5 +45,6 @@ const loadNotes = function (){
 
 module.exports = {
     getNotes: getNotes,
-    addNote: addNote
+    addNote: addNote,
+    removeNote: removeNote
 }
