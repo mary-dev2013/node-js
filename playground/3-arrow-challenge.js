@@ -10,11 +10,9 @@ const tasks = {
         completed: false 
     }],
     getTaskToDo: function (){
-        
-        const tasksToDo = this.tasks.filter((task) => {
+        return this.tasks.filter((task) => {
             return task.completed === false  
         })
-        return tasksToDo
     }
 }
 
